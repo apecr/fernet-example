@@ -4,12 +4,20 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "*"
 
 [packages]
 cryptography = "*"
+flask = "*"
+pyyaml = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"
 
 [scripts]
 start = "python app.py"
+lint = "black ."
+
+[pipenv]
+allow_prereleases = true
