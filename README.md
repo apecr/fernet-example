@@ -32,3 +32,10 @@ pipenv run start --port $YOUR_PORT
 ```
 
 * **port**: is set by default to 5000.
+
+## Test the API
+
+Once the application is up and running you can request for `http://127.0.0.1:5010/users`.
+Here is an example from postman:
+
+![Request for users](docs/request_users.png)
