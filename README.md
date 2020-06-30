@@ -28,7 +28,7 @@ To run the program:
 
 ```sh
 pipenv shell
-python app.py
+pipenv run start --port $YOUR_PORT
 ```
 
 * **port**: is set by default to 5000.

@@ -1,3 +1,4 @@
+import click
 from flask import Flask
 
 from src.blueprint.user import user_bp
@@ -16,7 +17,13 @@ def create_app():
     return app
 
 
-if __name__ == "__main__":
+@click.command()
+@click.option("--port", "-p", help="Port where the application will run", default=5000)
+def main(port):
     run_app = create_app()
     run_app.logger.debug("Creating the app")
-    run_app.run(port=5000, debug=True)
+    run_app.run(port=port, debug=True)
+
+
+if __name__ == "__main__":
+    main()
